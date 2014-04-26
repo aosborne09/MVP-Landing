@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='col-sm-12'>
+<h2 style= 'text-align: center;'>Just one more step. Please complete the following...</h2>
+		<form class='well form-search' method='POST' action=''> {% csrf_token %}
+		{{ form.as_p }}	
+		<input type='submit' class='btn btn-success btn-block' value='Complete Pre-Order'>
+		</form>   
+</div>
+{% endblock %}
+

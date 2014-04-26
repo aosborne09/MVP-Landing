@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block jumbotron %}
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class='col-sm-6'>
+        <h1>Rappers delight!</h1>
+        <p>Check out these videos - these guys hold it down...</p>
+        <p><a class="btn btn-default btn-lg" href='{% url "video" %}' role="button">Learn more &raquo;</a></p>
+        </div>
+        <div class='col-sm-6'><iframe width="560" height="315" src="//www.youtube.com/embed/QJFO2OPpcTI" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-4">
+        <h2>Social</h2>
+        <p><div class="fb-like" data-href="http://rapcribs.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></p>
+        <p><div><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://rapcribs.com" data-via="alexosborne">Tweet</a></div></p>
+    </div>
+    
+    <div class="col-md-4">
+    	<h2>Pre Order</h2>
+    	<p>Join this course now! Please pre-order</p>
+    	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="EVH2DFZKD5PP4">
+		<input type="hidden" name="on0" value="Course">
+		<select name="os0" class="form-control">
+			<option value="Basic">Basic $49.99 USD</option>
+			<option value="Basic +">Basic + $99.99 USD</option>
+			<option value="Premium">Premium $149.99 USD</option>
+		</select> 
+		<input type="hidden" name="currency_code" value="USD"></br>
+		<input type="submit" class="btn btn-success btn-block">
+		</form>
+
+
+		       
+    </div>
+
+{% endblock %}
